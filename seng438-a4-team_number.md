@@ -14,6 +14,37 @@
 
 # Analysis of 10 Mutants of the Range class 
 
+getLength() - negated double field lower
+
+  Our test case with Range(3.0, 3.0) kills this mutation. The expected return value is 0.0 but the mutation returns 6.0.   
+
+
+getCentralValue() - replaced double addition with multiplication
+
+  Our test case with Range(0.0, 10.0) kills this mutation. The expected return value is 5.0 but the mutation returns 0.0.
+
+
+contains(double value) - less than to equal 
+
+  Our test case with Range(0.0, 10.0) with value = 0.001 kills this mutation. The value falls within the range. Therefore, 
+  the expected return value is true but the mutation returns false.
+
+
+intersects(double b0, double b1) - negated conditional
+
+  Our test case with Range(5.0, 10.0) and Range(0.0, 5.0) kills this mutation. The ranges intersect. Therefore, the expected 
+  return value is true since the ranges intersect on 5.0 with one another. The mutation inverts the return which is caught 
+  by the test.
+
+  
+
+  
+
+  
+
+  
+  
+
 # Report all the statistics and the mutation score for each test class
 
 
