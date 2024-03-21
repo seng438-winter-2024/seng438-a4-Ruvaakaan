@@ -16,7 +16,7 @@
 # Analysis of 10 Mutants of the Range class 
 
  
-|number #| method      |  line  | mutation  | status  | analysis
+| #| method      |  line  | mutation  | status  | analysis
 | --| -- | --- |--- |--- |-------- |
 |1| getLength() |   return this.upper - this.lower  |  negated double field lower |  killed  |   Our test case with Range(3.0, 3.0) kills this mutation. The length between these two bounds is 0.0. Therefore, the expected return value is 0.0. The mutation returns 6.0 (3.0 - (-3.0) = 6.0 ) which is caught by the test.  | 
 |2 |  getCentralValue()           |   return this.lower / 2.0 + this.upper / 2.0  |  replaced double addition with multiplication|  killed  |   Our test case with Range(0.0, 10.0) kills this mutation. The expected return value is 5.0 but the mutation returns 0.0 since we are multiplying the lower and upper bounds divided by two by one another.  | 
