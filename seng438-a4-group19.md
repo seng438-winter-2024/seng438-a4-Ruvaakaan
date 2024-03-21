@@ -38,6 +38,21 @@
 
 # Report all the statistics and the mutation score for each test class
 
+**Range Before**
+
+![rangemutation](https://github.com/seng438-winter-2024/seng438-a4-Ruvaakaan/assets/95046408/976239d1-1d55-4ef0-ad3f-e440f8bcb400)
+
+**Range After**
+
+![assignment4-summary-after-range](https://github.com/seng438-winter-2024/seng438-a4-Ruvaakaan/assets/95046408/eb666291-4d6e-4941-acd4-5acbe59bf8b8)
+
+**DataUtilities Before**
+
+![datautilitiesmutation](https://github.com/seng438-winter-2024/seng438-a4-Ruvaakaan/assets/95046408/416f7a92-74a6-43f6-a350-572d2fab5cc3)
+
+**DataUtilities After**
+
+
 
 
 # Analysis drawn on the effectiveness of each of the test classes
