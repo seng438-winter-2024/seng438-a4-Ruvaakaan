@@ -67,7 +67,13 @@ Our test case with Range(Double.NaN, Double.NaN) fails to kill this mutation. Th
 
 
   
-
+| method      |  line  | mutation  | status  | explanation
+| -------------- | --- |--- |--- |--- |
+| getLength() |   return this.upper - this.lower  |  negated double field lower |  killed  |   Our test case with Range(3.0, 3.0) kills this mutation. The length between these two bounds is 0.0. Therefore, the expected return value is 0.0. The mutation returns 6.0 (3.0 - (-3.0) = 6.0 ) which is caught by the test.  | 
+|  getCentralValue()           |     |
+|     contains(double value)          |     |
+|      intersects(double b0, double b1)        |     |
+|      constrain(double value)         |     |
 
   
 
