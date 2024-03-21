@@ -15,30 +15,30 @@
 
 # Analysis of 10 Mutants of the Range class 
 
-getLength() - negated double field lower - killed
+**getLength() - negated double field lower - killed**
 
   Our test case with Range(3.0, 3.0) kills this mutation. The expected return value is 0.0 but the mutation returns 6.0.   
 
 
-getCentralValue() - replaced double addition with multiplication - killed
+**getCentralValue() - replaced double addition with multiplication - killed**
 
   Our test case with Range(0.0, 10.0) kills this mutation. The expected return value is 5.0 but the mutation returns 0.0.
 
 
-contains(double value) - less than to equal - killed
+**contains(double value) - less than to equal - killed**
 
   Our test case with Range(0.0, 10.0) and value = 0.001 kills this mutation. The value falls within the range. Therefore, 
   the expected return value is true. However, the mutation returns false which is caught by the test.
 
 
-intersects(double b0, double b1) - negated conditional - killed
+**intersects(double b0, double b1) - negated conditional - killed**
 
   Our test case with Range(5.0, 10.0) and Range(0.0, 5.0) kills this mutation. The ranges intersect. Therefore, the expected 
   return value is true since the ranges intersect on 5.0 with one another. The mutation inverts the return which is caught 
   by the test.
 
 
-constrain(double value) - removed conditional replaced equality check with false - killed
+**constrain(double value) - removed conditional replaced equality check with false - killed**
 
   Our test case with Range(0.0, 10.0) and value = 15.0 kills this mutation. The expected return is 10 since the value falls 
   outside the upper range. The removed conditional mutation always returns the value (15 in this case). Thus, the test 
