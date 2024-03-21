@@ -17,7 +17,7 @@
 
  
 |number #| method      |  line  | mutation  | status  | explanation
-| -------------- | --- |--- |--- |--- |
+| --| -------------- | --- |--- |--- |--- |
 |1| getLength() |   return this.upper - this.lower  |  negated double field lower |  killed  |   Our test case with Range(3.0, 3.0) kills this mutation. The length between these two bounds is 0.0. Therefore, the expected return value is 0.0. The mutation returns 6.0 (3.0 - (-3.0) = 6.0 ) which is caught by the test.  | 
 |2 |  getCentralValue()           |   return this.lower / 2.0 + this.upper / 2.0  |  replaced double addition with multiplication|  killed  |   Our test case with Range(0.0, 10.0) kills this mutation. The expected return value is 5.0 but the mutation returns 0.0 since we are multiplying the lower and upper bounds divided by two by one another.  | 
 | 3|     contains(double value)          |   return (value >= this.lower && value <= this.upper)  |  less than to equal |  killed  |   Our test case with Range(0.0, 10.0) and value = 0.001 kills this mutation. The value falls within the range. Therefore, the expected return value is true. However, the mutation returns false since 0.001 != 0.0 is not which is caught by the test.  | 
