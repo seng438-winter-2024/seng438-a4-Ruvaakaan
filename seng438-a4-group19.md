@@ -5,10 +5,10 @@
 | Group 19:      |    |
 | -------------- | --- |
 | Student Names: |     |
-|     Ethan Bensler           |     |
-|      Liam Brennan          |     |
-|      Andrew Duong          |     |
-|      Joseph Duong          |     |
+|     Ethan Bensler           |  30140326   |
+|      Liam Brennan          |   30142832  |
+|      Andrew Duong          |  30139573   |
+|      Joseph Duong          |   30145210  |
 
 # Introduction
 
@@ -87,11 +87,21 @@ Mutation testing also has its drawbacks. It can be computationally expensive, po
 
 # Explain your SELENUIM test case design process
 
+As eBay is an e-commerce website, we prioritized testing eBay's core e-commerce functionalities, including adding items to carts, searching for products, and viewing detailed item information. Given the platform's reliance on user accounts, we also designed test cases to ensure seamless account creation, login, and management. 
+
 # Explain the use of assertions and checkpoints
+
+Assertions and checkpoints both serve to verify specific values or elements on a page. The differentiation between the two is the way the verification is handled. Assertions are more direct as they definitively define an expected outcome and compare it with the actual outcome, terminating if there is a mismatch. Checkpoints are more relaxed as they mainly serve to validate information and do not terminate upon mismatch. Assertions are typically used for more critical points in a program that must be correct in order for the program to continue whereas with checkpoints, we can use them to gather informaion about application behaviour even if the initial expectations are unmet.
 
 # how did you test each functionaity with different test data
 
+The different test data we used were the different items available on eBay and the state of whether the user was logged in or not. 
+
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
+
+Selenium is primarily designed for testing web applications where the code for the web page is accessible. By being able to access specific elements in a web page and read the underlying code, it’s able to quickly find and store information on the page and interact with the web page while monitoring any changes of state. Selenium is particularly useful for GUI testing as it relates to CI/CD as tests are able to be executed in the cloud, which allows for Selenium to be used as an automated test in deployment.
+
+Sikulix can be used to test web applications, but isn’t solely limited to those as it can also be used to test other applications outside of the browser. This is because Sikulix works by using image recognition to record and perform actions to complete tests. It’s particularly useful when the underlying code behind an application is inaccessible as it doesn’t rely on reading different HTML tags or classes to identify components. However, a major drawback to this Sikulix is that a real screen must be connected in order for it to work. This is a major limitation as it relates to CI/CD as it becomes impossible to run Sikulix tests in the cloud as an automated step in deployment.
 
 # How the team work/effort was divided and managed
 
@@ -99,7 +109,7 @@ For mutation testing, we divided the testing responsibilities for the Range clas
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
-Understanding the impact of mutations on the source code during mutation testing was initially challenging. However, consulting the PitTest documentation helped clarify these effects. Boosting the total mutation score, especially for the Range class, presented difficulties. Transitioning to Selenium testing also posed challenges, particularly due to frequent changes in object IDs on the site. Additionally, dealing with mobile authentication on eBay added complexity to test execution. 
+Understanding the impact of mutations on the source code during mutation testing was initially challenging. However, consulting the PitTest documentation helped clarify these effects. Boosting the total mutation score, especially for the Range class, presented difficulties. As for the Selenium testing, the main challenge was learning to use the IDE. We faced constant issues with trying to run Selenium as there were constant freezes and the general user experience felt lacking as the IDE lacks many modern features that other GUI testing softwares have. Additionally, sometimes the elements on the page were unable to be captured by Selenium which required us to change some of our test cases/test data in order to be able to run these tests. In the end, we were able to learn how to use Selenium effectively and complete our tests.
 
 # Comments/feedback on the lab itself
 
