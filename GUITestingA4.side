@@ -45,7 +45,7 @@
       "id": "1821ebe9-2b84-46f6-8c02-c8b92c77a3fc",
       "comment": "",
       "command": "click",
-      "target": "id=gh-search-btn",
+      "target": "id=gh-btn",
       "targets": [
         ["id=gh-search-btn", "id"],
         ["css=#gh-search-btn", "css:finder"],
@@ -460,7 +460,7 @@
       "id": "321b66e9-512c-4b84-adc5-150cb4d27ebd",
       "comment": "",
       "command": "click",
-      "target": "id=gh-search-btn",
+      "target": "id=gh-btn",
       "targets": [
         ["id=gh-search-btn", "id"],
         ["css=#gh-search-btn", "css:finder"],
@@ -567,7 +567,7 @@
       "id": "8a4fa6b4-cf55-49b5-b77d-21b8216b2cc0",
       "comment": "",
       "command": "click",
-      "target": "id=gh-search-btn",
+      "target": "id=gh-btn",
       "targets": [
         ["id=gh-search-btn", "id"],
         ["css=#gh-search-btn", "css:finder"],
@@ -678,7 +678,7 @@
       "id": "e8e5d02c-b3b3-4740-b3d9-579476db4a05",
       "comment": "",
       "command": "click",
-      "target": "id=gh-search-btn",
+      "target": "id=gh-btn",
       "targets": [
         ["id=gh-search-btn", "id"],
         ["css=#gh-search-btn", "css:finder"],
@@ -848,7 +848,7 @@
       "target": "css=.text-display-span:nth-child(3) > .fake-link",
       "targets": [
         ["css=.text-display-span:nth-child(3) > .fake-link", "css:finder"],
-        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
         ["xpath=//div[@id='mainContent']/div/div[3]/div/div/div/ul/li/div/div/div/div[2]/span[2]/button", "xpath:idRelative"],
         ["xpath=//span[2]/button", "xpath:position"],
         ["xpath=//button[contains(.,'Remove')]", "xpath:innerText"]
@@ -999,7 +999,7 @@
       "id": "a458e6ba-9376-4489-b19d-176b76f59ee0",
       "comment": "",
       "command": "click",
-      "target": "id=gh-search-btn",
+      "target": "id=gh-btn",
       "targets": [
         ["id=gh-search-btn", "id"],
         ["css=#gh-search-btn", "css:finder"],
@@ -1065,23 +1065,26 @@
       "id": "0af4a379-b727-4bcb-9ca1-df037e3bfb04",
       "comment": "",
       "command": "click",
-      "target": "css=.gh-my-ebay__link",
+      "target": "linkText=My eBay",
       "targets": [
-        ["css=.gh-my-ebay__link", "css:finder"],
-        ["xpath=//header[@id='gh']/nav/div[2]/div[3]/a/span", "xpath:idRelative"],
-        ["xpath=//div[3]/a/span", "xpath:position"],
-        ["xpath=//span[contains(.,'My eBay')]", "xpath:innerText"]
+        ["linkText=My eBay", "linkText"],
+        ["css=#gh-eb-My .gh-eb-li-a", "css:finder"],
+        ["xpath=//a[contains(text(),'My eBay')]", "xpath:link"],
+        ["xpath=//li[@id='gh-eb-My']/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.ebay.ca/mys/home?source=GBH')]", "xpath:href"],
+        ["xpath=//li[4]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'My eBay')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "219b43d3-691b-4df9-a71a-40468c4f2de7",
+      "id": "fb57ce3a-3a3b-499a-8409-3408cf950324",
       "comment": "",
       "command": "click",
       "target": "linkText=Saved sellers",
       "targets": [
         ["linkText=Saved sellers", "linkText"],
         ["css=.m-links-accordion > ul > li:nth-child(7) > a", "css:finder"],
-        ["xpath=//div[@id='mainContent']/div[3]/div/div/section/ul/li[7]/a", "xpath:idRelative"],
+        ["xpath=//div[@id='mainContent']/div[4]/div/div/section/ul/li[7]/a", "xpath:idRelative"],
         ["xpath=(//a[contains(@href, 'https://www.ebay.ca/myb/SavedSellers')])[2]", "xpath:href"],
         ["xpath=//section/ul/li[7]/a", "xpath:position"],
         ["xpath=//a[contains(.,'Saved sellers')]", "xpath:innerText"]
@@ -1092,12 +1095,7 @@
       "comment": "",
       "command": "assertElementPresent",
       "target": "css=.seller-card__details-section",
-      "targets": [
-        ["css=.seller-card__details-section", "css:finder"],
-        ["xpath=//div[@id='middle-wrapper-grid']/div[3]/div[2]/ul/li/section[2]", "xpath:idRelative"],
-        ["xpath=//li/section[2]", "xpath:position"],
-        ["xpath=//section[contains(.,'bv-overstock')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "1a0311b9-597d-4e0d-829a-f97ad08bd44a",
@@ -1150,6 +1148,13 @@
       ],
       "value": ""
     }, {
+      "id": "3197d5f9-d1dd-4dbf-9366-010f2791d7e5",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "e6d06094-d1e5-484a-a2f7-8b5c389ab597",
       "comment": "",
       "command": "assertText",
@@ -1164,12 +1169,15 @@
       "id": "b7386072-e4aa-4e8b-8377-b9aef253fcbb",
       "comment": "",
       "command": "click",
-      "target": "css=.gh-my-ebay__link",
+      "target": "linkText=My eBay",
       "targets": [
-        ["css=.gh-my-ebay__link", "css:finder"],
-        ["xpath=//header[@id='gh']/nav/div[2]/div[3]/a/span", "xpath:idRelative"],
-        ["xpath=//div[3]/a/span", "xpath:position"],
-        ["xpath=//span[contains(.,'My eBay')]", "xpath:innerText"]
+        ["linkText=My eBay", "linkText"],
+        ["css=#gh-eb-My .gh-eb-li-a", "css:finder"],
+        ["xpath=//a[contains(text(),'My eBay')]", "xpath:link"],
+        ["xpath=//li[@id='gh-eb-My']/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.ebay.ca/mys/home?source=GBH')]", "xpath:href"],
+        ["xpath=//li[4]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'My eBay')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
@@ -1190,11 +1198,11 @@
       "id": "9f3d0648-fe7f-410f-aecc-482032885062",
       "comment": "",
       "command": "assertText",
-      "target": "css=h2",
+      "target": "css=.saved-seller-main__empty > h2",
       "targets": [
-        ["css=h2", "css:finder"],
+        ["css=.saved-seller-main__empty > h2", "css:finder"],
         ["xpath=//div[@id='middle-wrapper-grid']/div[3]/div[2]/div/h2", "xpath:idRelative"],
-        ["xpath=//h2", "xpath:position"]
+        ["xpath=//div[2]/div/h2", "xpath:position"]
       ],
       "value": "There's nothing here (yet)"
     }, {
@@ -1219,34 +1227,34 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "68625573-68f3-43de-adb2-aeb69057d53a",
+      "id": "4175ef26-8135-49cf-a024-ea9ac836206f",
       "comment": "",
       "command": "click",
-      "target": "css=.gh-identity .gh-flyout__target",
+      "target": "css=#gh-ug > b:nth-child(1)",
       "targets": [
-        ["css=.gh-identity .gh-flyout__target", "css:finder"],
-        ["xpath=//header[@id='gh']/nav/div/span/div/button", "xpath:idRelative"],
-        ["xpath=//button", "xpath:position"],
-        ["xpath=//button[contains(.,'Hi SENG!')]", "xpath:innerText"]
+        ["css=#gh-ug > b:nth-child(1)", "css:finder"],
+        ["xpath=//button[@id='gh-ug']/b", "xpath:idRelative"],
+        ["xpath=//b", "xpath:position"],
+        ["xpath=//b[contains(.,'SENG')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "3882eaa0-94f8-47e2-88d0-4475b65621eb",
+      "id": "4bf3db85-9358-48d2-8861-509739597bdc",
       "comment": "",
       "command": "click",
       "target": "linkText=Sign out",
       "targets": [
         ["linkText=Sign out", "linkText"],
-        ["css=.gh-identity-signed-in__link:nth-child(3) > a", "css:finder"],
+        ["css=#gh-uo > a", "css:finder"],
         ["xpath=//a[contains(text(),'Sign out')]", "xpath:link"],
-        ["xpath=//div[@id='s0-1-3-9-3[0]-0-1-dialog']/div/div/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//li[@id='gh-uo']/a", "xpath:idRelative"],
         ["xpath=//a[contains(@href, 'https://signin.ebay.ca/ws/eBayISAPI.dll?SignIn&lgout=1')]", "xpath:href"],
-        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//li[5]/a", "xpath:position"],
         ["xpath=//a[contains(.,'Sign out')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "ab62de9e-0e19-470b-bb0a-0cf1752e5a6f",
+      "id": "e9358e8a-e028-4eff-86ed-b072cecdf350",
       "comment": "",
       "command": "close",
       "target": "",
@@ -1295,7 +1303,7 @@
       "id": "2804d2dd-3d5a-4399-aeed-3ba47832129b",
       "comment": "",
       "command": "click",
-      "target": "id=gh-search-btn",
+      "target": "id=gh-btn",
       "targets": [
         ["id=gh-search-btn", "id"],
         ["css=#gh-search-btn", "css:finder"],
@@ -1449,7 +1457,7 @@
       "id": "cc824701-65cc-48e8-b96f-586f8824588f",
       "comment": "",
       "command": "click",
-      "target": "id=gh-search-btn",
+      "target": "id=gh-btn",
       "targets": [
         ["id=gh-search-btn", "id"],
         ["css=#gh-search-btn", "css:finder"],
@@ -1664,6 +1672,826 @@
       "value": ""
     }, {
       "id": "1e52fd29-132d-4c84-850f-edf3be8549ef",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "dc4de690-0ad0-4f6e-afbd-7f61a450dfa0",
+    "name": "testSavingSearches",
+    "commands": [{
+      "id": "e5e7ff18-db15-4871-82eb-803dc28c62d8",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b660a919-e412-40da-92ff-f047b5708dbd",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87795836-517e-4d33-9d76-6c9996e9edb8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign in",
+      "targets": [
+        ["linkText=Sign in", "linkText"],
+        ["css=#gh-ug > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign in')]", "xpath:link"],
+        ["xpath=//span[@id='gh-ug']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://signin.ebay.ca/ws/eBayISAPI.dll?SignIn&ru=https%3A%2F%2Fwww.ebay.ca%2F')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "910e48bd-6c52-47b5-959c-713020c4e959",
+      "comment": "",
+      "command": "click",
+      "target": "id=pass",
+      "targets": [
+        ["id=pass", "id"],
+        ["name=pass", "name"],
+        ["css=#pass", "css:finder"],
+        ["xpath=//input[@id='pass']", "xpath:attributes"],
+        ["xpath=//form[@id='signin-form']/div/div[3]/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "374a4c84-d6a9-478f-b3f5-35d5a69b9c0d",
+      "comment": "",
+      "command": "type",
+      "target": "id=pass",
+      "targets": [
+        ["id=pass", "id"],
+        ["name=pass", "name"],
+        ["css=#pass", "css:finder"],
+        ["xpath=//input[@id='pass']", "xpath:attributes"],
+        ["xpath=//form[@id='signin-form']/div/div[3]/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "SENG438testingAssignment4"
+    }, {
+      "id": "6dc97021-b088-49f1-89d3-775b43aa5b45",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=sgnBt",
+      "targets": [
+        ["id=sgnBt", "id"],
+        ["name=sgnBt", "name"],
+        ["css=#sgnBt", "css:finder"],
+        ["xpath=//button[@id='sgnBt']", "xpath:attributes"],
+        ["xpath=//form[@id='signin-form']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3945a05-8744-498a-a8d4-663cd133c6f7",
+      "comment": "",
+      "command": "click",
+      "target": "id=sgnBt",
+      "targets": [
+        ["id=sgnBt", "id"],
+        ["name=sgnBt", "name"],
+        ["css=#sgnBt", "css:finder"],
+        ["xpath=//button[@id='sgnBt']", "xpath:attributes"],
+        ["xpath=//form[@id='signin-form']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "332bc2c0-5ed9-486a-876e-f50a649850d6",
+      "comment": "",
+      "command": "click",
+      "target": "id=gh-ac",
+      "targets": [
+        ["id=gh-ac", "id"],
+        ["name=_nkw", "name"],
+        ["css=#gh-ac", "css:finder"],
+        ["xpath=//input[@id='gh-ac']", "xpath:attributes"],
+        ["xpath=//div[@id='gh-ac-box2']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f046dcea-736a-45ac-90f5-f48647337598",
+      "comment": "",
+      "command": "type",
+      "target": "id=gh-ac",
+      "targets": [
+        ["id=gh-ac", "id"],
+        ["name=_nkw", "name"],
+        ["css=#gh-ac", "css:finder"],
+        ["xpath=//input[@id='gh-ac']", "xpath:attributes"],
+        ["xpath=//div[@id='gh-ac-box2']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "shoes"
+    }, {
+      "id": "dbc5a72f-186e-4dc6-b12e-50625154ee49",
+      "comment": "",
+      "command": "click",
+      "target": "id=gh-btn",
+      "targets": [
+        ["id=gh-btn", "id"],
+        ["css=#gh-btn", "css:finder"],
+        ["xpath=//input[@id='gh-btn']", "xpath:attributes"],
+        ["xpath=//table[@id='gh-search-wrap']/tbody/tr/td[3]/input", "xpath:idRelative"],
+        ["xpath=//td[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9820d57b-0312-4aa2-8ee1-97fea9ba1245",
+      "comment": "",
+      "command": "click",
+      "target": "css=.follow-heart-wrapper",
+      "targets": [
+        ["css=.follow-heart-wrapper", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div/div/div/div[2]/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//div/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae29f2ee-07b8-44eb-90d8-cde733ced81f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.faux-link",
+      "targets": [
+        ["css=.faux-link", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div/div/div/div[2]/div/div/span/span/span/span/button", "xpath:idRelative"],
+        ["xpath=//span/span/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Saved')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7959e15a-a3e6-4cc7-baed-5575d493e0f0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=My eBay",
+      "targets": [
+        ["linkText=My eBay", "linkText"],
+        ["css=#gh-eb-My .gh-eb-li-a", "css:finder"],
+        ["xpath=//a[contains(text(),'My eBay')]", "xpath:link"],
+        ["xpath=//li[@id='gh-eb-My']/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.ebay.ca/mys/home?source=GBH')]", "xpath:href"],
+        ["xpath=//li[4]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'My eBay')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b8b73e3c-7b64-4c61-a982-ccf8ca96ab90",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Saved searches",
+      "targets": [
+        ["linkText=Saved searches", "linkText"],
+        ["css=.m-links-accordion > ul > li:nth-child(6) > a", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div[4]/div/div/section/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.ebay.ca/myb/SavedSearches')])[2]", "xpath:href"],
+        ["xpath=//section/ul/li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Saved searches')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "835c6404-61f8-489e-aa00-364e9297448f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.search-item-list",
+      "targets": [
+        ["css=.search-item-list", "css:finder"],
+        ["xpath=//div[@id='middle-wrapper-grid']/div[2]/div[2]/ul/li", "xpath:idRelative"],
+        ["xpath=//div[2]/ul/li", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "084f4a06-94ea-4128-8022-61643e0eac7a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-icon > .infotip__host",
+      "targets": [
+        ["css=.list-icon > .infotip__host", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='middle-wrapper-grid']/div[2]/div/div/div/div[2]/span/button", "xpath:idRelative"],
+        ["xpath=//div[2]/span/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b43a33e-5731-454e-9b60-0c22d50b6809",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn--secondary > span",
+      "targets": [
+        ["css=.btn--secondary > span", "css:finder"],
+        ["xpath=//span[@id='nid-xkk-4']/button/span", "xpath:idRelative"],
+        ["xpath=//li/span/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34ab56f8-77fe-4042-9b13-dab6c6fda04a",
+      "comment": "",
+      "command": "click",
+      "target": "css=#s0-1-35-0-6\\[0\\]-7-content-menu > .menu-button__item:nth-child(2) > span > span",
+      "targets": [
+        ["css=#s0-1-35-0-6\\[0\\]-7-content-menu > .menu-button__item:nth-child(2) > span > span", "css:finder"],
+        ["xpath=//div[@id='s0-1-35-0-6[0]-7-content-menu']/div[2]/span/span", "xpath:idRelative"],
+        ["xpath=//li/span/span/div/div[2]/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5095b9a0-4b5f-436a-a8cf-8aaa24a4efed",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.saved-search-main__empty",
+      "targets": [
+        ["css=.saved-search-main__empty", "css:finder"],
+        ["xpath=//div[@id='middle-wrapper-grid']/div[2]/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "12378523-9059-4037-8785-e4475545bcab",
+      "comment": "",
+      "command": "click",
+      "target": "id=gh-ug",
+      "targets": [
+        ["id=gh-ug", "id"],
+        ["css=#gh-ug", "css:finder"],
+        ["xpath=//button[@id='gh-ug']", "xpath:attributes"],
+        ["xpath=//li[@id='gh-eb-u']/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Hi SENG!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e868df8-8d77-4014-8594-6d0723c27f1b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign out",
+      "targets": [
+        ["linkText=Sign out", "linkText"],
+        ["css=#gh-uo > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign out')]", "xpath:link"],
+        ["xpath=//li[@id='gh-uo']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://signin.ebay.ca/ws/eBayISAPI.dll?SignIn&lgout=1')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "42c96bf3-0540-457d-93b5-da372f787093",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "920ab2ec-92c4-4fef-97db-ba1af95d2ae3",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b8ba48ef-1c09-48d3-8ab2-a6ee94795930",
+    "name": "testLoggingInInvalid",
+    "commands": [{
+      "id": "c8ed59f3-3f07-4e34-871c-24322b9e515f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "12742c3d-88f0-4834-b49a-50dfa4642ffe",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1184e3ac-b2f0-4b5f-ba16-17e6e1edf492",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign in",
+      "targets": [
+        ["linkText=Sign in", "linkText"],
+        ["css=#gh-ug > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign in')]", "xpath:link"],
+        ["xpath=//span[@id='gh-ug']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://signin.ebay.ca/ws/eBayISAPI.dll?SignIn&ru=https%3A%2F%2Fwww.ebay.ca%2F')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0647d918-0cbd-4a60-a917-cbce692187a2",
+      "comment": "",
+      "command": "click",
+      "target": "id=pass",
+      "targets": [
+        ["id=pass", "id"],
+        ["name=pass", "name"],
+        ["css=#pass", "css:finder"],
+        ["xpath=//input[@id='pass']", "xpath:attributes"],
+        ["xpath=//form[@id='signin-form']/div/div[3]/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "92bc8504-90fa-47dc-a775-2f6986b3d95e",
+      "comment": "",
+      "command": "type",
+      "target": "id=pass",
+      "targets": [
+        ["id=pass", "id"],
+        ["name=pass", "name"],
+        ["css=#pass", "css:finder"],
+        ["xpath=//input[@id='pass']", "xpath:attributes"],
+        ["xpath=//form[@id='signin-form']/div/div[3]/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "invalidpassword"
+    }, {
+      "id": "877a30a7-db54-4100-8f55-050a30684027",
+      "comment": "",
+      "command": "click",
+      "target": "id=sgnBt",
+      "targets": [
+        ["id=sgnBt", "id"],
+        ["name=sgnBt", "name"],
+        ["css=#sgnBt", "css:finder"],
+        ["xpath=//button[@id='sgnBt']", "xpath:attributes"],
+        ["xpath=//form[@id='signin-form']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc4fb653-4752-4bf6-a0c1-746de097aace",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=sgnBt",
+      "targets": [
+        ["id=sgnBt", "id"],
+        ["name=sgnBt", "name"],
+        ["css=#sgnBt", "css:finder"],
+        ["xpath=//button[@id='sgnBt']", "xpath:attributes"],
+        ["xpath=//form[@id='signin-form']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a8070c5-31c4-45ab-b0a8-dbac225e1ea2",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.inline-notice",
+      "targets": [
+        ["css=.inline-notice", "css:finder"],
+        ["xpath=//form[@id='signin-form']/div/div[3]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div/div[3]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "88f97419-3a0b-42af-b2bc-4722be6fd052",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "id=gh-ug",
+      "targets": [
+        ["id=gh-ug", "id"],
+        ["css=#gh-ug", "css:finder"],
+        ["xpath=//button[@id='gh-ug']", "xpath:attributes"],
+        ["xpath=//li[@id='gh-eb-u']/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Hi SENG!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "19eda102-89a2-4ea8-89f9-bfc6cdd14254",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a13ff3a7-6dc3-467f-b4ef-e3820c3acc64",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "5f5949e8-6e56-4b1f-a807-8543bfbf2528",
+    "name": "testLoggingInAndOut",
+    "commands": [{
+      "id": "77ae651e-0fa3-40ab-9f88-816b07e7036d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b6f80ad5-4336-42b7-b631-a27d7e4dd034",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "20d932ca-23f8-4ac6-9e72-3033801fc05c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign in",
+      "targets": [
+        ["linkText=Sign in", "linkText"],
+        ["css=#gh-ug > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign in')]", "xpath:link"],
+        ["xpath=//span[@id='gh-ug']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://signin.ebay.ca/ws/eBayISAPI.dll?SignIn&ru=https%3A%2F%2Fwww.ebay.ca%2F')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0dd08342-5786-43b0-b0ce-3e33d4b7b4fe",
+      "comment": "",
+      "command": "click",
+      "target": "id=pass",
+      "targets": [
+        ["id=pass", "id"],
+        ["name=pass", "name"],
+        ["css=#pass", "css:finder"],
+        ["xpath=//input[@id='pass']", "xpath:attributes"],
+        ["xpath=//form[@id='signin-form']/div/div[3]/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d3e4f51-4dda-4473-9d65-b07d76d3088b",
+      "comment": "",
+      "command": "type",
+      "target": "id=pass",
+      "targets": [
+        ["id=pass", "id"],
+        ["name=pass", "name"],
+        ["css=#pass", "css:finder"],
+        ["xpath=//input[@id='pass']", "xpath:attributes"],
+        ["xpath=//form[@id='signin-form']/div/div[3]/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "SENG438testingAssignment4"
+    }, {
+      "id": "22ae10f8-9cb9-407e-83bf-7948e68b9d04",
+      "comment": "",
+      "command": "click",
+      "target": "id=sgnBt",
+      "targets": [
+        ["id=sgnBt", "id"],
+        ["name=sgnBt", "name"],
+        ["css=#sgnBt", "css:finder"],
+        ["xpath=//button[@id='sgnBt']", "xpath:attributes"],
+        ["xpath=//form[@id='signin-form']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eaac1b75-d66e-44c8-8325-2d8d686d00cf",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=gh-ug",
+      "targets": [
+        ["id=gh-ug", "id"],
+        ["css=#gh-ug", "css:finder"],
+        ["xpath=//button[@id='gh-ug']", "xpath:attributes"],
+        ["xpath=//li[@id='gh-eb-u']/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Hi SENG!')]", "xpath:innerText"]
+      ],
+      "value": "Hi SENG!"
+    }, {
+      "id": "4e59ff7b-f111-4fbf-834d-64837f41ad4d",
+      "comment": "",
+      "command": "click",
+      "target": "id=gh-ug",
+      "targets": [
+        ["id=gh-ug", "id"],
+        ["css=#gh-ug", "css:finder"],
+        ["xpath=//button[@id='gh-ug']", "xpath:attributes"],
+        ["xpath=//li[@id='gh-eb-u']/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Hi SENG!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d1e9431-a1a6-41f9-97ce-ab199620cd34",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign out",
+      "targets": [
+        ["linkText=Sign out", "linkText"],
+        ["css=#gh-uo > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign out')]", "xpath:link"],
+        ["xpath=//li[@id='gh-uo']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://signin.ebay.ca/ws/eBayISAPI.dll?SignIn&lgout=1')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "41529cd4-2f5d-4652-92ae-d718a61aa9b9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=signout-banner",
+      "targets": [
+        ["id=signout-banner", "id"],
+        ["css=#signout-banner", "css:finder"],
+        ["xpath=//div[@id='signout-banner']", "xpath:attributes"],
+        ["xpath=//div[@id='signout-banner-container']/div", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ca99a8a-3656-42df-ada8-8454f1cb02c0",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=gh-ug",
+      "targets": [
+        ["id=gh-ug", "id"],
+        ["css=#gh-ug", "css:finder"],
+        ["xpath=//span[@id='gh-ug']", "xpath:attributes"],
+        ["xpath=//li[@id='gh-eb-u']/span", "xpath:idRelative"],
+        ["xpath=//li/span", "xpath:position"]
+      ],
+      "value": "Hi (Sign in)"
+    }, {
+      "id": "80856e09-4390-48a1-adc5-d88d74bb0869",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69f012d6-f17f-4d3a-bef0-265dd59ad8f3",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "16fe326c-50d4-4def-83a0-343d49fd861d",
+    "name": "testSavingItemToWatchlist",
+    "commands": [{
+      "id": "c881c6d2-57f4-4e3a-bd82-8d84b53683e2",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "733e198d-55e7-4cb7-89e3-4031da3d974c",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6db9919f-d45b-4227-94d1-b8a45995efa3",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=eBay Deals",
+      "targets": [
+        ["linkText=eBay Deals", "linkText"],
+        ["css=#gh-p-1 > .gh-p", "css:finder"],
+        ["xpath=//a[contains(text(),'eBay Deals')]", "xpath:link"],
+        ["xpath=//li[@id='gh-p-1']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.ebay.ca/deals')]", "xpath:href"],
+        ["xpath=//div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'eBay Deals')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b430767d-c134-434f-8b7c-2718378f9000",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=eBay Deals",
+      "targets": [
+        ["linkText=eBay Deals", "linkText"],
+        ["css=#gh-p-1 > .gh-p", "css:finder"],
+        ["xpath=//a[contains(text(),'eBay Deals')]", "xpath:link"],
+        ["xpath=//li[@id='gh-p-1']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.ebay.ca/deals')]", "xpath:href"],
+        ["xpath=//div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'eBay Deals')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a66426bc-1d7e-4775-8146-bc918fe77562",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign in",
+      "targets": [
+        ["linkText=Sign in", "linkText"],
+        ["css=#gh-ug > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign in')]", "xpath:link"],
+        ["xpath=//span[@id='gh-ug']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://signin.ebay.ca/ws/eBayISAPI.dll?SignIn&ru=https%3A%2F%2Fwww.ebay.ca%2F')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ac110a4-c19d-4729-b464-b3e592836062",
+      "comment": "",
+      "command": "click",
+      "target": "id=pass",
+      "targets": [
+        ["id=pass", "id"],
+        ["name=pass", "name"],
+        ["css=#pass", "css:finder"],
+        ["xpath=//input[@id='pass']", "xpath:attributes"],
+        ["xpath=//form[@id='signin-form']/div/div[3]/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "42c478ee-40df-4c2e-8005-adc759e92a4b",
+      "comment": "",
+      "command": "type",
+      "target": "id=pass",
+      "targets": [
+        ["id=pass", "id"],
+        ["name=pass", "name"],
+        ["css=#pass", "css:finder"],
+        ["xpath=//input[@id='pass']", "xpath:attributes"],
+        ["xpath=//form[@id='signin-form']/div/div[3]/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "SENG438testingAssignment4"
+    }, {
+      "id": "3e712070-d7a5-41a6-8839-bb73f1de0aca",
+      "comment": "",
+      "command": "click",
+      "target": "id=sgnBt",
+      "targets": [
+        ["id=sgnBt", "id"],
+        ["name=sgnBt", "name"],
+        ["css=#sgnBt", "css:finder"],
+        ["xpath=//button[@id='sgnBt']", "xpath:attributes"],
+        ["xpath=//form[@id='signin-form']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c803239-067e-40c4-8dde-1f6b37455aed",
+      "comment": "",
+      "command": "click",
+      "target": "id=gh-ac",
+      "targets": [
+        ["id=gh-ac", "id"],
+        ["name=_nkw", "name"],
+        ["css=#gh-ac", "css:finder"],
+        ["xpath=//input[@id='gh-ac']", "xpath:attributes"],
+        ["xpath=//div[@id='gh-ac-box2']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "40ac8788-b668-4646-ae9b-e090ecec6ccc",
+      "comment": "",
+      "command": "type",
+      "target": "id=gh-ac",
+      "targets": [
+        ["id=gh-ac", "id"],
+        ["name=_nkw", "name"],
+        ["css=#gh-ac", "css:finder"],
+        ["xpath=//input[@id='gh-ac']", "xpath:attributes"],
+        ["xpath=//div[@id='gh-ac-box2']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "lego"
+    }, {
+      "id": "d805c268-9829-4c16-a281-5bf3064cfb25",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=gh-ac",
+      "targets": [
+        ["id=gh-ac", "id"],
+        ["name=_nkw", "name"],
+        ["css=#gh-ac", "css:finder"],
+        ["xpath=//input[@id='gh-ac']", "xpath:attributes"],
+        ["xpath=//div[@id='gh-ac-box2']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "544a5f59-3675-44bf-bfb7-1676d3377c98",
+      "comment": "",
+      "command": "click",
+      "target": "css=#item349291dc7a .s-item__watchheart-icon",
+      "targets": [
+        ["css=#item349291dc7a .s-item__watchheart-icon", "css:finder"],
+        ["xpath=//li[@id='item349291dc7a']/div/div/span/button/span", "xpath:idRelative"],
+        ["xpath=//li[3]/div/div/span/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "897d4b99-558f-4c25-ad50-7745b68d5a62",
+      "comment": "",
+      "command": "click",
+      "target": "css=#gh-eb-My .gh-sprRetina",
+      "targets": [
+        ["css=#gh-eb-My .gh-sprRetina", "css:finder"],
+        ["xpath=//li[@id='gh-eb-My']/div/a/i", "xpath:idRelative"],
+        ["xpath=//li[4]/div/a/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db62342f-7974-4da5-82d2-83962b9204a4",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.m-item-card",
+      "targets": [
+        ["css=.m-item-card", "css:finder"],
+        ["xpath=//div[@id='container-1-anchor']/section/div[2]/div[3]/div/div", "xpath:idRelative"],
+        ["xpath=//section/div[2]/div[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7822de1b-0981-4cc9-a06e-4b5a0ad58ccd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.border-header .checkbox > .checkbox__control",
+      "targets": [
+        ["css=.border-header .checkbox > .checkbox__control", "css:finder"],
+        ["xpath=//input[@type='checkbox']", "xpath:attributes"],
+        ["xpath=//div[@id='container-1-anchor']/section/div/div[2]/div/div/div/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "723ce612-d95f-45d0-a5e9-a90ca14e70c8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.container-actions:nth-child(2) .default",
+      "targets": [
+        ["css=.container-actions:nth-child(2) .default", "css:finder"],
+        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='container-1-anchor']/section/div/div[2]/div/div/span/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e829765a-fdd4-4a8c-879a-3aaf8661a66e",
+      "comment": "",
+      "command": "click",
+      "target": "id=gh-ug",
+      "targets": [
+        ["id=gh-ug", "id"],
+        ["css=#gh-ug", "css:finder"],
+        ["xpath=//button[@id='gh-ug']", "xpath:attributes"],
+        ["xpath=//li[@id='gh-eb-u']/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Hi SENG!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf79949d-4fa0-445e-8931-22cc9264af02",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign out",
+      "targets": [
+        ["linkText=Sign out", "linkText"],
+        ["css=#gh-uo > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign out')]", "xpath:link"],
+        ["xpath=//li[@id='gh-uo']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://signin.ebay.ca/ws/eBayISAPI.dll?SignIn&lgout=1')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "90d7a7eb-6728-4141-89fc-ff08df1a4c7a",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba77a039-260a-4109-89ae-5598e6732bb4",
       "comment": "",
       "command": "close",
       "target": "",
