@@ -60,6 +60,8 @@ This lab comprises two main parts: Mutation Testing and GUI Testing. In the Muta
 
 # Analysis drawn on the effectiveness of each of the test classes
 
+The effectiveness of the RangeTest class appears to be relatively lower, as indicated by its mutation score of only 69%, even after significant improvements were made to the test class. Conversely, the DataUtilities class achieved a much higher mutation score of 82%. This stark contrast suggests that the DataUtilities class is more robust and capable of handling a wide range of unique situations compared to the Range class.
+
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 
 Equivalent mutants can impact the accuracy of mutation scores when they are present but not detected by the test suite which inflates the mutation score. The test suite does not distinguish between equivalent mutants and genuine faults, it reports higher mutation scores, suggesting better test coverage than achieved.
