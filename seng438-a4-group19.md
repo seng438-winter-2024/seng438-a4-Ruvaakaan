@@ -12,6 +12,7 @@
 
 # Introduction
 
+This lab comprises two main parts: Mutation Testing and GUI Testing. In the Mutation Testing section, we will learn how to introduce mutation faults into a Java codebase using a mutation testing tool. Additionally, we'll understand how to analyze the resulting mutation scores and utilize this knowledge to develop new test cases, ultimately enhancing the overall quality of our test suite. The second part focuses on GUI Testing, where we'll explore the record and replay approach, a commonly used method for automating graphical user interface tests. Specifically, we'll become familiar with Selenium, a well-known tool for web interface testing, and compare it with other alternatives.
 
 # Analysis of 10 Mutants of the Range class 
 
