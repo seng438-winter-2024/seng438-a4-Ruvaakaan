@@ -92,7 +92,7 @@ Mutation testing also has its drawbacks. It can be computationally expensive, po
 
 # How the team work/effort was divided and managed
 
-For mutation testing, we split the Range class testing between Liam and Ethan and then we split the DataUtilities testing between Andrew and Joseph. Then for the Selenium testing, each group member created two tests to test the ebay website, totaling 8 tests. 
+For mutation testing, we divided the testing responsibilities for the Range class between Liam and Ethan, while Andrew and Joseph tackled the testing for DataUtilities. Subsequently, each team member contributed by creating two Selenium tests to evaluate the eBay website, culminating in a total of eight tests.
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
