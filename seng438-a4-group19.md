@@ -109,7 +109,7 @@ For mutation testing, we divided the testing responsibilities for the Range clas
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
-Understanding the impact of mutations on the source code during mutation testing was initially challenging. However, consulting the PitTest documentation helped clarify these effects. Boosting the total mutation score, especially for the Range class, presented difficulties. As for the Selenium testing, the main challenge was learning to use the IDE. We faced constant issues with trying to run Selenium as there were constant freezes and the general user experience felt lacking as the IDE lacks many modern features that other GUI testing softwares have. Additionally, sometimes the elements on the page were unable to be captured by Selenium which required us to change some of our test cases/test data in order to be able to run these tests. In the end, we were able to learn how to use Selenium effectively and complete our tests.
+Understanding the impact of mutations on the source code during mutation testing was initially challenging. However, consulting the PitTest documentation helped clarify these effects. Boosting the total mutation score, especially for the Range class, presented difficulties. As for the Selenium testing, the main challenge was using the IDE itself. We faced issues with trying to run Selenium as there were some performance problems and issues with the software properly detecting some actions/elements when recording. Although the perfomance issues were related to the software itself, we overcame the issues with detection by manually modifying and ensuring that the correct items were being selected in our playbacks.
 
 # Comments/feedback on the lab itself
 
