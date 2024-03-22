@@ -38,19 +38,19 @@
 
 # Report all the statistics and the mutation score for each test class
 
-**Range Before**
+**Range Before:**
 
 ![rangemutation](https://github.com/seng438-winter-2024/seng438-a4-Ruvaakaan/assets/95046408/976239d1-1d55-4ef0-ad3f-e440f8bcb400)
 
-**Range After**
+**Range After:**
 
 ![Screenshot 2024-03-21 192346](https://github.com/seng438-winter-2024/seng438-a4-Ruvaakaan/assets/95046408/81a0f6a2-a17c-4231-b332-049be5665f0e)
 
-**DataUtilities Before**
+**DataUtilities Before:**
 
 ![datautilitiesmutation](https://github.com/seng438-winter-2024/seng438-a4-Ruvaakaan/assets/95046408/416f7a92-74a6-43f6-a350-572d2fab5cc3)
 
-**DataUtilities After**
+**DataUtilities After:**
 
 
 
@@ -61,7 +61,19 @@
 
 # A discussion of what could have been done to improve the mutation score of the test suites
 
+To boost our test suite's mutation scores, we reviewed each method, focusing on methods with high a number of surviving mutants. Additionally, we increased our efforts to enhance test coverage by considering various scenarios and edge cases more thoroughly. This ensured our tests were robust and capable of handling mutations. Moreover, we addressed issues in the source code, particularly in the Range and DataUtilities classes. Key improvements were made to the expand(), intersects(), and combine() methods in the Range class and specific adjustments to the <INSERT WHICH METHODS WERE CHANGED> methods in the DataUtilities class we also made. These modifications removed any failures from out test suite and increased our mutation scores.
+
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
+
+Mutation testing serves as a powerful tool for gauging the efficacy of our test suite in detecting bugs. Through its utilization, we not only enhance the effectiveness of our test cases but also increase the reliability of our systems.
+
+**Advantages:**
+
+Mutation testing provides a thorough evaluation of test suite effectiveness, identifying areas where tests fail to detect mutations, thus revealing weaknesses in test coverage. Additionally, it encourages developers to write more comprehensive test cases, fostering continuous improvement in testing practices and enabling early bug detection.
+
+**Disadvantages:**
+
+Mutation testing also has its drawbacks. It can be computationally expensive, potentially leading to longer testing times and resource constraints. Specifically for this assignment, it took around 5 minutes for the the mutation testing to be completed. Moreover, interpreting results accurately requires a deep understanding of both the codebase and testing principles.
 
 # Explain your SELENUIM test case design process
 
@@ -73,7 +85,12 @@
 
 # How the team work/effort was divided and managed
 
+For mutation testing, we split the Range class testing between Liam and Ethan and then we split the DataUtilities testing between Andrew and Joseph. Then for the Selenium testing, each group member created two tests to test the ebay website, totaling 8 tests. 
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
+Understanding the impact of mutations on the source code during mutation testing was initially challenging. However, consulting the PitTest documentation helped clarify these effects. Boosting the total mutation score, especially for the Range class, presented difficulties. Transitioning to Selenium testing also posed challenges, particularly due to frequent changes in object IDs on the site. Additionally, dealing with mobile authentication on eBay added complexity to test execution. 
+
 # Comments/feedback on the lab itself
+
+The lab provided valuable insights into injecting mutation faults into a Java codebase using a mutation testing tool, allowing us to interpret reported mutation scores effectively. We can now design new test cases to enhance the overall quality of test suites. Additionally, the session equipped us with proficiency in utilizing Selenium as a GUI test automation tool, broadening our skill set and strengthening our testing capabilities.
