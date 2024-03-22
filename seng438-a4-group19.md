@@ -52,12 +52,16 @@
 
 **DataUtilities After:**
 
+![newdatautils](https://github.com/seng438-winter-2024/seng438-a4-Ruvaakaan/assets/113311709/c191f13b-3b13-46fa-b960-0d58cb1d3af8)
+
 
 
 
 # Analysis drawn on the effectiveness of each of the test classes
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
+
+Equivalent mutants can impact the accuracy of mutation scores when they are present but not detected by the test suite which inflates the mutation score. The test suite does not distinguish between equivalent mutants and genuine faults, it reports higher mutation scores, suggesting better test coverage than achieved.
 
 # A discussion of what could have been done to improve the mutation score of the test suites
 
@@ -74,6 +78,7 @@ Mutation testing provides a thorough evaluation of test suite effectiveness, ide
 **Disadvantages:**
 
 Mutation testing also has its drawbacks. It can be computationally expensive, potentially leading to longer testing times and resource constraints. Specifically for this assignment, it took around 5 minutes for the the mutation testing to be completed. Moreover, interpreting results accurately requires a deep understanding of both the codebase and testing principles.
+
 
 # Explain your SELENUIM test case design process
 
