@@ -69,6 +69,7 @@ To boost our test suite's mutation scores, we reviewed each method, focusing on 
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
 
+**Why?**
 Mutation testing serves as a powerful tool for gauging the efficacy of our test suite in detecting bugs. Through its utilization, we not only enhance the effectiveness of our test cases but also increase the reliability of our systems.
 
 **Advantages:**
