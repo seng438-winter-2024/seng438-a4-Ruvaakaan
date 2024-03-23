@@ -93,9 +93,9 @@ As eBay is an e-commerce website, we prioritized testing eBay's core e-commerce 
 
 Assertions and checkpoints both serve to verify specific values or elements on a page. The differentiation between the two is the way the verification is handled. Assertions are more direct as they definitively define an expected outcome and compare it with the actual outcome, terminating if there is a mismatch. Checkpoints are more relaxed as they mainly serve to validate information and do not terminate upon mismatch. Assertions are typically used for more critical points in a program that must be correct in order for the program to continue whereas with checkpoints, we can use them to gather informaion about application behaviour even if the initial expectations are unmet.
 
-# how did you test each functionaity with different test data
+# Defects and Bugs
 
-The different test data we used were the different items available on eBay and the state of whether the user was logged in or not. 
+There were no bugs to report that we found. The closest thing we had to encountering that were inconsistencies in the login process, such as requesting a captcha to be completed or asking if we wanted to set up a passkey for quicker authentication.
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 
